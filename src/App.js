@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import HocUseState from './ftusestate/dungusestate'
+// import SetGift from "./ftusestate/setgiftuserstate"
+// import TwoWayBinding from "./ftusestate/twowaybinding"
+import FduseEffect from "./fduseeffect/useEffect"
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  return(
+    // use state
+    // <>
+    //     <HocUseState/>
+    //     <SetGift/>
+    //     <TwoWayBinding/>
+    // </>
+    // use effect
+    <>
+      <FduseEffect/>
+    </>
+  )
 }
 
 export default App;
