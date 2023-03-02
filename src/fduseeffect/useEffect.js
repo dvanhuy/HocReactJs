@@ -7,7 +7,6 @@ function CompomentRerender(){
     const [title,settitle] = useState("");
     const [menu,setmenu] = useState("posts");
 
-    const [totop,settotop] = useState(false);
     // useEffect(()=>{
     //     fetch("https://jsonplaceholder.typicode.com/posts")
     //         .then(response => response.json())
@@ -19,9 +18,15 @@ function CompomentRerender(){
     },[title])
 
     useEffect(()=>{
-        window.addEventListener("scroll",()=>{
-            settotop(window.scrollY > 200) 
-        })
+        const hanlde = ()=>{
+            console.log("123");
+        }
+        window.addEventListener("scroll",hanlde)
+        console.log("addEventListener");
+        return ()=>{
+            window.removeEventListener("scroll",hanlde)
+            console.log("removeEventListener");
+        }
     },[])
 
 
