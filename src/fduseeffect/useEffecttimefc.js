@@ -1,8 +1,8 @@
 function UseEffectTimeFunction(){
     return(
         <>
-            <div>avdjahsd</div>
-            <div>asdasdasd</div>
+            <div>Effect time function</div>
+            <div>toogle</div>
         </>
     )
 }
