@@ -20,11 +20,14 @@ function UseEffectFakeCommect(){
     const [lessonid,setLessonid] = useState(1)
 
     useEffect(()=>{
-        const sukienComment = (ev)=>{
-            console.log(ev);
+        const sukienComment = ({detail})=>{
+            console.log(detail);
         }
-        window.addEventListener("noidung1",sukienComment)
-    },[])
+        window.addEventListener("noidung"+lessonid,sukienComment)
+        return(()=>{
+            window.removeEventListener("noidung"+lessonid,sukienComment)
+        })
+    },[lessonid])
 
     return (
         <>
@@ -36,7 +39,7 @@ function UseEffectFakeCommect(){
                             {
                                 color: lessonid === lesson.id ? "red" : "black",
                                 cursor: "pointer",
-                                fontSize:"18px"
+                                fontSize:"20px"
                             }
                         }
                         onClick={()=>setLessonid(lesson.id)}
