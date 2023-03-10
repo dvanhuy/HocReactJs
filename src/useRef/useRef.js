@@ -1,8 +1,21 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 function TestUseRef(){
 
     const [count,setCount] = useState(60)
+    //chỉ tạo 1 lần
+    const timeID = useRef();
+    const prevCount = useRef();
+    const domelement = useRef();
+    
+    //lưu số cũ
+    useEffect(()=>{
+        prevCount.current = count
+    },[count])
+    //lun lun in
+    useEffect(()=>{
+        console.log("dom",domelement.current);
+    })
 
     // useEffect (()=>{
     //     const setTime = setInterval(()=>{
@@ -11,21 +24,23 @@ function TestUseRef(){
     //     })
     //     return ()=>clearInterval(setTime)
     // })
-
+    // nếu render lại sẽ bị lỗi 
+    // let timeID
     const handleStart= ()=>{
-        console.log("Start");
-        setInterval(()=>{
+        timeID.current = setInterval(()=>{
             setCount(ev=>ev-1)
-        },500)
+        },1000)
+        console.log("Start ",timeID.current);
     }
     const handleStop= ()=>{
-        console.log("Stop");
+        console.log("Stop ",timeID.current);
+        clearInterval(timeID.current)
     }
 
-
+    console.log("Count ",count," prevcount ",prevCount.current);
     return (
         <>
-            <h1>{count}</h1>
+            <h1 ref={domelement}>{count}</h1>
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>
         </>
