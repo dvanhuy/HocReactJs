@@ -8,6 +8,12 @@ function TestUseRef(){
     const prevCount = useRef();
     const domelement = useRef();
     
+    useEffect(()=>{
+        return (()=>{
+            console.log("Clear");
+            clearInterval(timeID.current)
+        })
+    },[])
     //lưu số cũ
     useEffect(()=>{
         prevCount.current = count
@@ -29,6 +35,7 @@ function TestUseRef(){
     const handleStart= ()=>{
         timeID.current = setInterval(()=>{
             setCount(ev=>ev-1)
+            console.log("Count");
         },1000)
         console.log("Start ",timeID.current);
     }
