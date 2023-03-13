@@ -3,10 +3,11 @@
 // import TwoWayBinding from "./ftusestate/twowaybinding"
 // import FduseEffect from "./fduseeffect/useEffect"
 import { useState } from "react";
+import SetCountMemo from "./memo/setcountmemo";
 // import UseEffectAvatar from "./fduseeffect/useEffectAvatar";
 // import UseEffectFakeCommect from "./fduseeffect/useEffectFakeComment";
 // import UseLayOutEffect from "./useLayoutEffect/uselayoutEffect";
-import TestUseRef from "./useRef/useRef";
+// import TestUseRef from "./useRef/useRef";
 // import UseEffectCleanUpCB from "./fduseeffect/useEffectCleanUpCB";
 // import UseEffectDomResizeFc from "./fduseeffect/useEffectDomResize";
 // import UseEffectTimeFunction from "./fduseeffect/useEffecttimefc";
@@ -34,7 +35,7 @@ function ToogleMount(){
                   setshow(!show);
               }}  
           > Toogle</button>
-          {show && <TestUseRef/>}  
+          {show && <SetCountMemo/>}  
       </div>
   )
 }
