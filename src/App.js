@@ -3,7 +3,9 @@
 // import TwoWayBinding from "./ftusestate/twowaybinding"
 // import FduseEffect from "./fduseeffect/useEffect"
 import { useState } from "react";
-import SetCountMemo from "./memo/setcountmemo";
+// import SetCountMemo from "./memo/setcountmemo";
+// import UseCallBackk from "./useCallback/usecallbackkk";
+import UseMemooo from "./useMeMO/usememooo";
 // import UseEffectAvatar from "./fduseeffect/useEffectAvatar";
 // import UseEffectFakeCommect from "./fduseeffect/useEffectFakeComment";
 // import UseLayOutEffect from "./useLayoutEffect/uselayoutEffect";
@@ -35,7 +37,7 @@ function ToogleMount(){
                   setshow(!show);
               }}  
           > Toogle</button>
-          {show && <SetCountMemo/>}  
+          {show && <UseMemooo/>}  
       </div>
   )
 }
