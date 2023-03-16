@@ -44,11 +44,11 @@ function UseMemooo(){
             onChange={e=>setPrice(e.target.value)} />
             <br />
             <button onClick={handleSubmit}>Thêm</button>
-            <h3>Giá toàn bộ : {total} </h3>
+            <h3>Giá toàn bộ là: {total} </h3>
             <div>
                 <ul>{product.map((ev,index)=>{
                     return (
-                        <li key={index}>{ev.name} : {ev.price}</li>
+                        <li key={index}>Sản phẩm: {ev.name} - Giá:  {ev.price}</li>
                     )
                 })}</ul>
             </div>
