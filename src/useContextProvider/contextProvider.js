@@ -12,6 +12,7 @@ function ThemeProvider({children}){
         handleTheme
     }
     return (
+        // đây là cách truyền con vào. truyền dưới dạng 1 object có 1 cột tên children
         <ThemContext.Provider value={valueTemp}>
             {children}
         </ThemContext.Provider>
