@@ -1,23 +1,6 @@
-// import HocUseState from './ftusestate/dungusestate'
-// import SetGift from "./ftusestate/setgiftuserstate"
-// import TwoWayBinding from "./ftusestate/twowaybinding"
-// import FduseEffect from "./fduseeffect/useEffect"
 import { useState } from "react";
-// import UseContextt from "./useContextAndcontext/usecontext";
 import "./App.css"
-import AppTemp from "./useContextProvider/appTemp";
-// import UseReducer1 from "./useReducer/useReducer1";
-// import SetCountMemo from "./memo/setcountmemo";
-// import UseCallBackk from "./useCallback/usecallbackkk";
-// import UseMemooo from "./useMeMO/usememooo";
-// import UseReducerrr from "./useReducer/useReducerrrr";
-// import UseEffectAvatar from "./fduseeffect/useEffectAvatar";
-// import UseEffectFakeCommect from "./fduseeffect/useEffectFakeComment";
-// import UseLayOutEffect from "./useLayoutEffect/uselayoutEffect";
-// import TestUseRef from "./useRef/useRef";
-// import UseEffectCleanUpCB from "./fduseeffect/useEffectCleanUpCB";
-// import UseEffectDomResizeFc from "./fduseeffect/useEffectDomResize";
-// import UseEffectTimeFunction from "./fduseeffect/useEffecttimefc";
+import IndexGloblestate from "./globlestate/IndexGloblestate"
 
 //tự tạo ra 1 hàm giống như là có người khác kích hoạt
 // function emitComment(id,noidung){
@@ -42,7 +25,7 @@ function ToogleMount(){
                   setshow(!show);
               }}  
           > Toogle</button>
-          {show && <AppTemp/>}  
+          {show && <IndexGloblestate/>}  
       </div>
   )
 }
