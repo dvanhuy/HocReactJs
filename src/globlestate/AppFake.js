@@ -1,11 +1,29 @@
-import { useContext } from "react";
-import ContextGloble from "./ContextGloble"
+import { useGloble } from "./hooks"; 
+import {actions} from "../globlestate"
 
 function AppFake(){
-    const [state,dispatch] = useContext(ContextGloble);
-    console.log(state);
+    const [state,dispatch] = useGloble()
+    const {todos,todoInput} = state
+    const handleAddToDo = ()=>{
+        dispatch(actions.addToDoInput(todoInput))
+    }
     return (
-        <div>sasd</div>
+        <div>
+            <input type="text" 
+            value={todoInput}
+            placeholder="Nhập công việc"
+            onChange={e=>{
+                dispatch(actions.setToDoInput(e.target.value))
+            }}/>
+            <button onClick={handleAddToDo}>Add</button>
+            <ul>
+                {todos.map((todo,index)=>{
+                    return (
+                        <div key={index}>{todo}</div>
+                    )
+                })}
+            </ul>
+        </div>
     )
 }
 export default AppFake
