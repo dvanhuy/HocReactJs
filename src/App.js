@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css"
-import IndexGloblestate from "./globlestate/IndexGloblestate"
+// import IndexGloblestate from "./globlestate/IndexGloblestate"
+import UseImperativee from "./useImperative/useImperative";
 
 //tự tạo ra 1 hàm giống như là có người khác kích hoạt
 // function emitComment(id,noidung){
@@ -25,7 +26,7 @@ function ToogleMount(){
                   setshow(!show);
               }}  
           > Toogle</button>
-          {show && <IndexGloblestate/>}  
+          {show && <UseImperativee/>}  
       </div>
   )
 }
